@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html ng-app="myApp" class="wide wow-animation" lang="en">
+  <head>
+    <title>Nelli - каталог</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body ng-controller="productList">
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Завантаження...</p>
+    </div>
+  </div>
+  <div class="page">
+    <header class="section page-header">
+      <!--RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+          <div class="rd-navbar-aside-outer rd-navbar-collapse bg-light">
+            <div class="rd-navbar-aside">
+              <ul class="list-inline navbar-contact-list">
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                    <div class="unit-body"><a href="tel:+380962120067">+38(096)21-20-067</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                    <div class="unit-body"><a href="tel:+380682415074">+38(068)24-15-074</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                    <div class="unit-body"><a href="mailto:nelli.syrop@gmail.com">nelli.syrop@gmail.com</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                    <div class="unit-body"><a href="#">Хмельницький, Львівське шосе 33</a></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="social-links">
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <!--RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!--RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!--RD Navbar Brand-->
+                <div class="rd-navbar-brand">
+                  <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo.png" alt="" width="100" height="17"/><img class="brand-logo-light" src="images/logo.png" alt="" width="100" height="17"/></a>
+                </div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Головна</a>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="shop.html">Каталог</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+      <section class="section section-intro context-dark">
+        <div class="intro-bg" style="background: url(images/bg-image.jpg) no-repeat;background-size:cover;background-position: top center;"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 text-center">
+              <h1 class="font-weight-bold wow fadeInLeft">Каталог товарів</h1>
+              <p class="intro-description wow fadeInRight">тов"Nelli"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="category-shop-grey" id="products">
+        <h3 class="products__title">Каталог</h3>
+        <div class="container">
+          <div class="swiper-container swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Всі</div>
+              <div class="swiper-slide" >Кавово-чайні</div>
+              <div class="swiper-slide">Фруктово-ягідні</div>
+              <div class="swiper-slide">Коктейльні</div>
+              <div class="swiper-slide">Новинки</div>
+              <div class="swiper-slide">Преміум</div>
+              <div class="swiper-slide">Сиропи у стіках</div>
+              <div class="swiper-slide">Мед та згущене молоко</div>
+              <div class="swiper-slide">Топінги</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+<!--          <input type="text" ng-model="search" size="20"/>-->
+          <div class="products__wrapper">
+            <div ng-repeat="product in products | filter" class="product box-filter">
+                <div class="product__img__background"><img class="product__img product__img__zoom" src="{{product.src}}" alt=""></div>
+                <div class="product__price">
+                  <div class="product__price__title" name="productName">Сироп {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
+                </div>
+              <div class="product__buttons">
+                <a href="#" class="buy popup-open">Придбати</a>
+                <a href="#" class="details">Детальніше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section footer-classic section-sm">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-lg-3 wow fadeInLeft">
+              <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-200x34.png" alt="" width="100" height="17"/><img class="brand-logo-light" src="images/logo.png" alt="" width="100" height="17"/></a>
+              <div class="d-block offset-top-0"><span class="text-days">Адреса:</span><br>29000 Україна, м.Хмельницький,<br>Львівське шосе, 33</div>
+            </div>
+            <div class="col-lg-3 col-sm-8 wow fadeInUp">
+              <P class="footer-classic-title">Контактна інформація</P>
+              <a class="d-inline-block accent-link" href="mailto:nelli.syrop@gmail.com">nelli.syrop@gmail.com</a><br><a class="d-inline-block accent-link" href="mailto:nelli.manager1@gmail.com">nelli.manager1@gmail.com</a><br><a class="d-inline-block" href="tel:+380962120067">+38(096)21-20-067</a><br><a class="d-inline-block" href="tel:+380682415074">+38(068)24-15-074</a>
+              <ul>
+                <li class="text-days">Пн-Пт:<span class="d-inline-block offset-left-10 text-important">9:00 - 17:00</span></li>
+                <li class="text-days">Сб-Нд:<span class="d-inline-block offset-left-10 text-important">Вихідні</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+              <P class="footer-classic-title">Посилання</P>
+              <ul class="footer-classic-nav-list">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="shop.html">Продукти</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
+              <P class="footer-classic-title">Зв'язатись з нами</P>
+              <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="form-wrap">
+                  <label class="form-label" for="subscribe-email">Ваша електрона адреса</label>
+                  <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+                </div>
+                <div class="form-button group-sm text-center text-lg-left">
+                  <button class="button button-primary button-circle" type="submit">Надіслати</button>
+                </div>
+              </form>
+              <p>Ми вам напишем на протязі робочого дня.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container wow fadeInUp" data-wow-delay=".4s">
+          <div class="footer-classic-aside">
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved.</p>
+            <ul class="social-links">
+              <li><a class="fa fa-facebook icon-color" href="#"></a></li>
+              <li><a class="fa fa-instagram icon-color" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+<!--Popup-->
+    <div id="popup" class="popup-fade">
+      <div class="popup">
+          <a href="#header" class="popup-close"><i class="fas fa-times"></i></a>
+          <div class="container popup__form">
+            <div id="messages" ng-show="message"></div>
+            <div class="form">
+              <form action="#" id="form" class="form__body">
+                <h1 class="popup-title">За'явка на придбання</h1>
+                <div class="form__item">
+                  <label for="formName" class="popup__label">Ваше ім'я*:</label>
+                  <input id="formName" type="text" name="name" class="form__input _req">
+                </div>
+                <div class="form__item">
+                  <label for="formEmail" class="popup__label">Ваша пошта*:</label>
+                  <input id="formEmail" type="text" name="email" class="form__input _email">
+                </div>
+                <div class="form__item">
+                  <label for="formPhone" class="popup__label">Ваш номер телефону:</label>
+                  <input id="formPhone" type="text" name="phone" class="form__input">
+                </div>
+                <button type="submit" class="form__button close-popup">Надіслати</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="product-mailsend.js"></script>
+    <script src="js/controllers/shop.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/Swiper.js"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
