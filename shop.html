@@ -123,7 +123,7 @@
 <!--          <input type="text" ng-model="search" size="20"/>-->
           <div class="products__wrapper">
             <div ng-repeat="product in products | filter" class="product box-filter">
-                <div class="product__img__background"><img class="product__img product__img__zoom" src="{{product.src}}" alt=""></div>
+                <div class="product__img__background"><img class="product__img" src="{{product.src}}" alt=""></div>
                 <div class="product__price">
                   <div class="product__price__title" name="productName">Сироп {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
                 </div>
