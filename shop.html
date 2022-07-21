@@ -120,12 +120,12 @@
             <div class="swiper-button-prev"></div>
           </div>
 
-<!--          <input type="text" ng-model="search" size="20"/>-->
           <div class="products__wrapper">
-            <div ng-repeat="product in products | filter" class="product box-filter">
+            <div ng-repeat="product in products | limitTo:totalDisplayed" class="product box-filter">
                 <div class="product__img__background"><img class="product__img" src="{{product.src}}" alt=""></div>
-                <div class="product__price">
+                <div>
                   <div class="product__price__title" name="productName">Сироп {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
+                  <p class="product__price">Ціна - <span style="color: #B6452C">{{product.price}}</span></p>
                 </div>
               <div class="product__buttons">
                 <a href="#" class="buy popup-open">Придбати</a>
@@ -133,6 +133,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="but-loadmore">
+          <button class="btn" ng-click="loadMore()">Завантажити ще</button>
         </div>
       </section>
       <footer class="section footer-classic section-sm">
