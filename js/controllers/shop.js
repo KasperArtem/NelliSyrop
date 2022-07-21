@@ -3,11 +3,6 @@ var myApp=angular.module('myApp', []);
 
 myApp.controller('productList', function ($scope) {
 
-    $scope.Filters = function (){
-        $scope.myFilter = id;
-    }
-
-
     $scope.totalDisplayed = 9;
 
     $scope.loadMore = function () {
@@ -70,7 +65,7 @@ myApp.controller('productList', function ($scope) {
         {'productName': 'Бабл Гам', 'src': 'images/shop/syrop/Коктейльна група/Бабл Гам.jpg','group': 'cocktail', 'price': '50₴'},
         {'productName': 'Блю кюрасао', 'src': 'images/shop/syrop/Коктейльна група/Блю_кюрасао.jpg','group': 'cocktail', 'price': '50₴'},
         {'productName': 'Глінтвейн', 'src': 'images/shop/syrop/Коктейльна група/Глінтвейн.jpg','group': 'cocktail', 'price': '50₴'},
-        {'productName': 'Маргарита', 'src': 'images/shop/syrop/Коктейльна група/Маргарита.jpg','group': 'coffe-tea', 'price': '50₴'},
+        {'productName': 'Маргарита', 'src': 'images/shop/syrop/Коктейльна група/Маргарита.jpg','group': 'cocktail', 'price': '50₴'},
         {'productName': 'Мохіто', 'src': 'images/shop/syrop/Коктейльна група/Мохіто.jpg','group': 'cocktail', 'price': '50₴'},
         {'productName': 'М\'ята', 'src': 'images/shop/syrop/Коктейльна група/М\'ята.jpg','group': 'cocktail', 'price': '50₴'},
         {'productName': 'Піна колада', 'src': 'images/shop/syrop/Коктейльна група/Піна колада.jpg','group': 'cocktail', 'price': '50₴'},
