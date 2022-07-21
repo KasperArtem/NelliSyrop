@@ -3,6 +3,11 @@ var myApp=angular.module('myApp', []);
 
 myApp.controller('productList', function ($scope) {
 
+    $scope.Filters = function (){
+        $scope.myFilter = id;
+    }
+
+
     $scope.totalDisplayed = 9;
 
     $scope.loadMore = function () {
