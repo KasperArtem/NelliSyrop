@@ -73,12 +73,29 @@ myApp.controller('productList', function ($scope) {
         // Новинки
 
         // Преміальна група
+        {'productName': 'Синій курасао', 'src': 'images/shop/syrop/Преміум група/Blue kuracao.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Диня', 'src': 'images/shop/syrop/Преміум група/Dinya.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Фісташка', 'src': 'images/shop/syrop/Преміум група/Fistashka.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Гранат', 'src': 'images/shop/syrop/Преміум група/Granat.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Зелений банан', 'src': 'images/shop/syrop/Преміум група/Green Banan.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Кавун', 'src': 'images/shop/syrop/Преміум група/Kavun.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Лайм', 'src': 'images/shop/syrop/Преміум група/Laim.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Манго', 'src': 'images/shop/syrop/Преміум група/Mango.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Мохіто', 'src': 'images/shop/syrop/Преміум група/Moxito.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'М\'ята', 'src': 'images/shop/syrop/Преміум група/Myata.jpg','group': 'premium', 'price': '250₴'},
+        {'productName': 'Вишня', 'src': 'images/shop/syrop/Преміум група/Vishnia.jpg','group': 'premium', 'price': '250₴'},
 
         // Сироп у стіках
 
         // Мед та згущене молоко
 
         // Топінги
+        {'productName': 'Шоколад', 'src': 'images/shop/syrop/Топінги/Chocolate.jpg','group': 'toppings', 'price': '250₴'},
+        {'productName': 'Чорна смородина', 'src': 'images/shop/syrop/Топінги/chorna-smorodina.jpg','group': 'toppings', 'price': '250₴'},
+        {'productName': 'Карамель', 'src': 'images/shop/syrop/Топінги/karamel.jpg','group': 'toppings', 'price': '250₴'},
+        {'productName': 'Ківі', 'src': 'images/shop/syrop/Топінги/kivi.jpg','group': 'toppings', 'price': '250₴'},
+        {'productName': 'Вишня', 'src': 'images/shop/syrop/Топінги/vishnya.jpg','group': 'toppings', 'price': '250₴'},
+        {'productName': 'Банан', 'src': 'images/shop/syrop/Топінги/банан.jpg','group': 'toppings', 'price': '250₴'},
     ];
     });
 
