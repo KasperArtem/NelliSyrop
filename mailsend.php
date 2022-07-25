@@ -16,11 +16,11 @@ $phone = $_POST['phone'];
 $productName = $_POST['productName'];
 
 
-$mail->setFrom('vipcontrol@www.vipcontrol.com.ua', 'VipControl');
+$mail->setFrom('example@www.example.com.ua', 'example');
 
 $mail->addAddress('kasprukov99@gmail.com');
 
-$mail->Subject= 'Лист з сайту "VipControl"';
+$mail->Subject= 'Лист з сайту "Nelli"';
 
 $body = '<h1>Ось інформація про замовлення:</h1>';
 
@@ -34,7 +34,7 @@ if(trim(!empty($_POST['phone']))){
     $body.='<p><strong>Телефон:</strong> '.$phone.'</p>';
 }
 if(trim(!empty($_POST['productName']))){
-    $body.='<p><strong>Послуга:</strong> '.$productName.'</p>';
+    $body.='<p><strong>Продукція:</strong> '.$productName.'</p>';
 }
 $mail->Body = $body;
 

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
-  <body ng-controller="productList">
+  <body ng-controller="productList" >
   <div class="preloader">
     <div class="preloader-body">
       <div class="cssload-container">
@@ -23,7 +23,7 @@
       <p>Завантаження...</p>
     </div>
   </div>
-  <div class="page">
+  <div class="page" >
     <header class="section page-header">
       <!--RD Navbar-->
       <div class="rd-navbar-wrap">
@@ -145,12 +145,12 @@
             <div ng-repeat="product in products | filter:search | limitTo:totalDisplayed" class="product box-filter">
                 <div class="product__img__background"><img class="product__img" src="{{product.src}}" alt=""></div>
                 <div>
-                  <div class="product__price__title" name="productName">Сироп {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
+                  <div class="product__price__title" name="productName">{{product.productClassName}} {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
                   <p class="product__price">Ціна - <span style="color: #B6452C">{{product.price}}</span></p>
                 </div>
               <div class="product__buttons">
-                <a href="#" class="buy popup-open">Придбати</a>
-                <a href="#" class="details">Детальніше</a>
+                <button class="buy popup-open" ng-click="ShowHide()">Придбати</button>
+                <button class="details">Детальніше</button>
               </div>
             </div>
           </div>
@@ -209,9 +209,9 @@
     </div>
     <div class="snackbars" id="form-output-global"></div>
 <!--Popup-->
-    <div id="popup" class="popup-fade">
+    <div id="popup" ng-show = "IsVisible" class="popup-fade">
       <div class="popup">
-          <a href="#header" class="popup-close"><i class="fas fa-times"></i></a>
+          <a href="#header" class="popup-close" ng-click="Hide()"><i class="fas fa-times"></i></a>
           <div class="container popup__form">
             <div id="messages" ng-show="message"></div>
             <div class="form">
@@ -229,7 +229,7 @@
                   <label for="formPhone" class="popup__label">Ваш номер телефону:</label>
                   <input id="formPhone" type="text" name="phone" class="form__input">
                 </div>
-                <button type="submit" class="form__button close-popup">Надіслати</button>
+                <button type="submit" class="form__button" ng-click="Hide()">Надіслати</button>
               </form>
             </div>
           </div>
@@ -239,7 +239,6 @@
     <script src="js/angular.min.js"></script>
     <script src="product-mailsend.js"></script>
     <script src="js/controllers/shop.js"></script>
-    <script src="js/popup.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/Swiper.js"></script>
     <script src="js/core.min.js"></script>
