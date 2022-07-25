@@ -3,6 +3,18 @@ var myApp=angular.module('myApp', []);
 
 myApp.controller('productList', function ($scope) {
 
+    // popup
+    $scope.IsVisible = false;
+
+    $scope.Hide = function (){
+        $scope.IsVisible = false;
+    }
+    $scope.ShowHide = function(){
+        $scope.IsVisible = true;
+        return false;
+    }
+
+
     // date
     $scope.products = [
 
@@ -93,6 +105,18 @@ myApp.controller('productList', function ($scope) {
         {'productClassName': 'Топінг', 'productName': 'Банан', 'src': 'images/shop/syrop/Топінги/банан.jpg','group': 'toppings', 'price': '250₴'},
     ];
 
+    //Close navigation panel on phone
+
+    $scope.class1 = false;
+
+    $scope.navFunction = function(){
+        $scope.class1 = true;
+    }
+    $scope.closeNav = function(){
+        angular.element(document.querySelector("#navClose")).removeClass("active");
+        angular.element(document.querySelector("#navClose2")).removeClass("active");
+    }
+
     //id for products
     var number = 1;
     $scope.count = function (){
@@ -105,22 +129,7 @@ myApp.controller('productList', function ($scope) {
     $scope.IsVisibleButton = true;
 
     $scope.loadMore = function () {
-            $scope.totalDisplayed += 9;
+        $scope.totalDisplayed += 9;
     };
-
-    // popup
-    $scope.IsVisible = false;
-
-    $scope.document = function (){
-        $scope.IsVisible = false;
-    }
-
-    $scope.Hide = function (){
-        $scope.IsVisible = false;
-    }
-    $scope.ShowHide = function(){
-        $scope.IsVisible = true;
-        return false;
-    }
     });
 
