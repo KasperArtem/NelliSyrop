@@ -142,21 +142,21 @@
             <div class="swiper-button-prev"></div>
           </div>
           <div class="products__wrapper">
-            <div ng-repeat="product in products | filter:search | limitTo:totalDisplayed" class="product box-filter">
+            <div class="product box-filter" ng-repeat="product in products | filter:search | limitTo:totalDisplayed" ng-init="id = count()" id="{{id}}">
                 <div class="product__img__background"><img class="product__img" src="{{product.src}}" alt=""></div>
                 <div>
                   <div class="product__price__title" name="productName">{{product.productClassName}} {{product.productName}} <span class="filter-text">{{product.group}}</span> </div>
                   <p class="product__price">Ціна - <span style="color: #B6452C">{{product.price}}</span></p>
                 </div>
               <div class="product__buttons">
-                <button class="buy popup-open" ng-click="ShowHide()">Придбати</button>
+                <button class="buy popup-open" ng-click="ShowHide(id)">Придбати</button>
                 <button class="details">Детальніше</button>
               </div>
             </div>
           </div>
         </div>
         <div class="but-loadmore">
-          <button class="btn" ng-click="loadMore()">Завантажити ще</button>
+          <button class="btn" ng-click="loadMore()" ng-show = "IsVisibleButton">Завантажити ще</button>
         </div>
       </section>
     <footer class="section footer-classic section-sm">

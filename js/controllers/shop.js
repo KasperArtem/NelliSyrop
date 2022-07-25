@@ -93,15 +93,27 @@ myApp.controller('productList', function ($scope) {
         {'productClassName': 'Топінг', 'productName': 'Банан', 'src': 'images/shop/syrop/Топінги/банан.jpg','group': 'toppings', 'price': '250₴'},
     ];
 
+    //id for products
+    var number = 1;
+    $scope.count = function (){
+        return number++;
+    }
+
     //visible products
     $scope.totalDisplayed = 9;
 
+    $scope.IsVisibleButton = true;
+
     $scope.loadMore = function () {
-        $scope.totalDisplayed += 9;
+            $scope.totalDisplayed += 9;
     };
 
     // popup
     $scope.IsVisible = false;
+
+    $scope.document = function (){
+        $scope.IsVisible = false;
+    }
 
     $scope.Hide = function (){
         $scope.IsVisible = false;
