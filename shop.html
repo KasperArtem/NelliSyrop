@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
@@ -184,10 +184,10 @@
           </div>
           <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
             <P class="footer-classic-title">Зв'язатись з нами</P>
-            <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+            <form class="rd-mailform text-left footer-classic-subscribe-form" id="mail-subscribe">
               <div class="form-wrap">
                 <label class="form-label" for="subscribe-email">Ваша електрона адреса</label>
-                <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+                <input class="form-input _email _req" id="subscribe-email" type="email" name="emailSubscribe">
               </div>
               <div class="form-button group-sm text-center text-lg-left">
                 <button class="button button-primary button-circle" type="submit">Надіслати</button>
@@ -258,9 +258,10 @@
   </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script src="product-mailsend.js"></script>
+    <script src="js/subscribe-mailsend.js"></script>
+    <script src="js/product-mailsend.js"></script>
     <script src="js/controllers/shop.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/Swiper.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>

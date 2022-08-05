@@ -205,10 +205,10 @@
             </div>
             <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
               <P class="footer-classic-title">Зв'язатись з нами</P>
-              <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <form class="rd-mailform text-left footer-classic-subscribe-form" id="mail-subscribe">
                 <div class="form-wrap">
                   <label class="form-label" for="subscribe-email">Ваша електрона адреса</label>
-                  <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+                  <input class="form-input _email _req" id="subscribe-email" type="email" name="emailSubscribe">
                 </div>
                 <div class="form-button group-sm text-center text-lg-left">
                   <button class="button button-primary button-circle" type="submit">Надіслати</button>
@@ -230,6 +230,7 @@
       </footer>
     </div>
     <div class="snackbars" id="form-output-global"></div>
+    <script src="js/subscribe-mailsend.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
