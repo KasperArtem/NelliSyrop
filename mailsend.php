@@ -15,17 +15,21 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $productName = $_POST['productName'];
 
+$mail->setFrom('nelli@nellisyrop.com.ua', 'тм"Nelli"');
 
-$mail->setFrom('example@www.example.com.ua', 'example');
-
-$mail->addAddress('kasprukov99@gmail.com');
+$mail->addAddress('motsnuy_serg@ukr.net');
+$mail->addAddress('nelli.manager1@gmail.com');
 
 $mail->Subject= 'Лист з сайту "Nelli"';
 
-$body = '<h1>Ось інформація про замовлення:</h1>';
+$body = '<h1>тм"Nelli"</h1>';
+
+if(trim(empty($_POST['name']))){
+    $body.='<h3>Зворотній зв\'язок:</h3>';
+}
 
 if(trim(!empty($_POST['name']))){
-    $body.='<p><strong>Імя:</strong> '.$name.'</p>';
+    $body.='<h3>Ось інформація про замовлення:</h3> <br> <p><strong>Імя:</strong> '.$name.'</p>';
 }
 if(trim(!empty($_POST['email']))){
     $body.='<p><strong>Пошта:</strong> '.$email.'</p>';

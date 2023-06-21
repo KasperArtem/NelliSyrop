@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let error = formValidate(form);
 
-        let formDate = new FormData(form);
+        let formDateMail = new FormData(form);
 
         if(error===0){
             form.classList.add('_sending');
             let response = await fetch('mailsend.php',{
                 method: 'POST',
-                body: formDate
+                body: formDateMail
             });
             if(response.ok){
                 let result = await response.json();
@@ -47,13 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     formAddError(input);
                     error++;
                 }
+            }else{
+                if(input.value === ''){
+                    formAddError(input);
+                    error++;
+                }
             }
-            // else{
-            //     if(input.value === ''){
-            //         formAddError(input);
-            //         error++;
-            //     }
-            // }
         }
         return error;
     }
